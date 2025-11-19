@@ -3,6 +3,17 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App'
 import Test from './Test'
+import Home from './pages/Home'
+import About from './pages/About'
+import Programs from './pages/Programs'
+import GetInvolved from './pages/GetInvolved'
+import Stories from './pages/Stories'
+import Transparency from './pages/Transparency'
+import Blog from './pages/Blog'
+import Contact from './pages/Contact'
+import Donate from './pages/Donate'
+import Newsletter from './pages/Newsletter'
+import NotFound from './pages/NotFound'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -10,7 +21,18 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/get-involved" element={<GetInvolved />} />
+        <Route path="/stories" element={<Stories />} />
+        <Route path="/transparency" element={<Transparency />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/newsletter" element={<Newsletter />} />
         <Route path="/test" element={<Test />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
